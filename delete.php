@@ -1,0 +1,9 @@
+<!-- File: delete.php -->
+<?php
+include "connect.php";
+
+$id = $_GET['id'];
+mysqli_query($conn, "DELETE FROM students WHERE id = $id");
+
+header("Location: view.php");
+?>
